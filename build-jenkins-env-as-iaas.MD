@@ -10,14 +10,17 @@ az vm create --resource-group jenkins-rg --name jenkins-vm --image UbuntuLTS --a
 ```
 
 # :computer: Install Jenkins
-```
-sudo apt update
-wget -q -O - http://pkg.jenkins-ci.org/debian/jenkins-ci.org.key | sudo apt-key add -
-sudo sh -c 'echo deb http://pkg.jenkins-ci.org/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
-sudo apt update
-sudo apt install jenkins
-sudo systemctl start jenkins
-sudo systemctl status jenkins
+```sh
+{
+  sudo apt update
+  sudo apt install openjdk-8-jdk
+  wget -q -O - https://pkg.jenkins.io/debian/jenkins.io.key | sudo apt-key add -
+  sudo sh -c 'echo deb http://pkg.jenkins.io/debian-stable binary/ > /etc/apt/sources.list.d/jenkins.list'
+  sudo apt update
+  sudo apt install jenkins
+  sudo systemctl start jenkins
+  sudo systemctl status jenkins
+}
 ```
 
 # :computer: Publish 8080 Port
