@@ -38,6 +38,8 @@ sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 ```
 ```
 
-# Creaata Azure DNS some
+# Creata Azure DNS some
 
 # Udate Domain Delegation
+
+# Cleanup Environment
